@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <title>Document</title>
+</head>
+<body>
+   <h1>Array of Objects - hands_On</h1>
+   <section>
+      <h2>Question 1 :- "We are interested in retrieving only the students' names; all the names should be in caps.
+
+['JOHN', 'BABA', 'YAGA', 'WICK']"</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ]
+         let array2 = [];
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            array2.push(studentRecords[i].name.toUpperCase());
+         }
+         console.log(array2);
+      </pre>
+      <pre class="answer">
+         Answer = ['JOHN', 'BABA', 'YAGA', 'WICK']
+      </pre>
+   </section>
+   
+   <section>
+      <h2>Question 2 :- "Suppose we have the same dataset as above but this time we want to get the details of students who scored more than 50 marks. [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ];
+         let array3 = [];
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            if(studentRecords[i].marks>50) {
+               array3.push(studentRecords[i]);
+            }
+         }
+         console.log(array3);
+      </pre>
+      <pre class="answer">
+         Answer =  [{name: 'John', id: 123, marks: 98}, {name: 'Wick', id: 115, marks: 98}]
+      </pre>
+   </section>
+
+   <section>
+      <h2>Question 3 :- Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ]
+         let array4 = [];
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            if(studentRecords[i].marks>50 && studentRecords[i].id>120) {
+               array4.push(studentRecords[i]);
+            }
+         }
+         console.log(array4);
+      </pre>
+      <pre class="answer">
+         Answer =  {name: 'John', id: 123, marks: 98}
+      </pre>
+   </section>
+
+   <section>
+      <h2>Question 4 :- Consider the same scenario we have discussed above, but this time we would like to know the sum total of the marks of the students.</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ]
+         let sum = 0;
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            sum += studentRecords[i].marks;
+         }
+         console.log(sum);
+      </pre>
+      <pre class="answer">
+         Answer =  241
+      </pre>
+   </section>
+
+   <section>
+      <h2>Question 5 :- This time we want to get only the names of the students who scored more than 50 marks from the same dataset used above.</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ]
+         let array5 = [];
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            if(studentRecords[i].marks>50) {
+               array5.push(studentRecords[i].name);
+            }
+         }
+         console.log(array5);
+      </pre>
+      <pre class="answer">
+         Answer =  ['John', 'Wick']
+      </pre>
+   </section>
+
+   <section>
+      <h2>Question 6 :- This time we are required to print the sum of marks of the students with id > 120.</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ]
+         let sum2 = 0;
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            if(studentRecords[i].id>120) {
+               sum2 += studentRecords[i].marks;
+            }
+         }
+         console.log(sum2);
+      </pre>
+      <pre class="answer">
+             Answer = 143</pre>
+   </section>
+
+   <section>
+      <h2>Question 7 :- This time we are required to print the sum of marks of the students with id > 120.</h2>
+      <pre>
+         let studentRecords = [ 
+            {name: 'John', id: 123, marks : 98 },
+            {name: 'Baba', id: 101, marks : 23 },
+            {name: 'yaga', id: 200, marks : 45 },
+            {name: 'Wick', id: 115, marks : 75 } ]
+         let sum3 = 0;
+         for(let i=0; i&lt;studentRecords.length; i++) {
+            if(studentRecords[i].marks&lt;50) {
+               studentRecords[i].marks += 15;
+            }
+            if(studentRecords[i].marks>50) {
+               sum3 += studentRecords[i].marks;
+            }
+         }
+         console.log(sum3);
+      </pre>
+      <pre class="answer">
+         Answer =  233
+      </pre>
+   </section>
+
+   <section>
+      <h2>Question 8 :- Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array of objects. </h2>
+      <pre>
+         let classStudent = [{name: 'Akhil', class: 10, roll: 3}, 
+         {name: 'David', class: 10, roll: 5}, 
+         {name: 'Deer', class: 10, roll: 7}, 
+         {name: 'Krishna', class: 10, roll: 8}, 
+         {name: 'Karen', class: 10, roll: 12},  
+         {name: "Arjun", class: 10, roll: 1}]
+         console.log(classStudent);
+      </pre>
+      <pre class="answer">
+         Answer =  [{name: 'David', class: 10, roll: 5},
+                     {name: 'Deer', class: 10, roll: 7}, 
+                     {name: 'Krishna', class: 10, roll: 8}, 
+                     {name: 'Karen', class: 10, roll: 12}, 
+                     {name: "Arjun", class: 10, roll: 1}]
+      </pre>
+   <script src="./script.js"></script>
+</body>
+</html>

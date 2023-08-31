@@ -1,0 +1,40 @@
+* {
+   margin: 0px;
+   padding: 0px;
+}
+
+body {
+   color: red;
+   background-color: cornflowerblue;
+   width: 100%;
+   font-family:sans-serif;
+}
+h1 {
+   color: gold;
+   margin-left: 30%;
+}
+
+section {
+   width: 100%;
+   margin: 50px auto;
+}
+
+h2 {
+   font-size: 20px;
+   margin-left: 10px;
+   margin-bottom: 20px;
+}
+
+.answer {
+   color: blue;
+   box-sizing: border-box;
+}
+
+pre {
+   width: 100%;
+   font-size: 22px;
+   line-height: 35px;
+   background: white;
+   border-radius: 5px;
+}
+
